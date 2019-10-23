@@ -16,6 +16,6 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "object-curly-newline": [0, { "multiline": true }]
+    "object-curly-newline": 0
   }
 }
