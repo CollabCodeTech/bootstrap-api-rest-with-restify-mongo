@@ -1,20 +1,25 @@
 {
   "name": "collabstreamers-api-picpay",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "test": "mocha --require sucrase/register ./test/**/*.js"
   },
   "author": "CollabCode",
   "license": "MPL-2.0",
   "dependencies": {
+    "app-root-path": "^2.2.1",
     "chai": "^4.2.0",
     "dotenv": "^8.2.0",
     "helmet": "^3.21.1",
     "mocha": "^6.2.2",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "restify": "^8.4.0",
+    "saslprep": "^1.0.3",
     "supertest": "^4.0.2",
     "winston": "^3.2.1"
   },
